@@ -7,11 +7,16 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
- dev_basis02
     public function index(Post $post) #Post $post → $post = new post　$postをclass Postでインスタンス化
     {
        
-        return view('posts/index')->with(['posts' => $post->getPaginateByLimit(1)]);  
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+    }
+
+    public function show(Post $post)
+    {
+        return view('posts/show')->with(['post' => $post]);
+
     }
 }
 
@@ -36,11 +41,3 @@ index.blade.php内の$postsはPostControllerの'posts'と対応
 */
 
 ?>
-=======
-    public function index(Post $post)
-    {
-        return $post->get();
-    }
-    
-}
- master
