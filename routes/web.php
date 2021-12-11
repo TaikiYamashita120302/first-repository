@@ -11,4 +11,10 @@
 |
 */
 
+dev_basis02
+Route::get('/', 'PostController@index');
+
+?>
+
 Route::get('/posts', 'PostController@index');
+ master
