@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index(Post $post) #Post $post → $post = new post　$postをclass Postでインスタンス化
     {
-        dd($post->getPaginateByLimit(5));
+       
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit(1)]);  
     }
 }
