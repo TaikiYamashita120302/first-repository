@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+ dev_basis02
     public function index(Post $post) #Post $post → $post = new post　$postをclass Postでインスタンス化
     {
        
@@ -35,3 +36,11 @@ index.blade.php内の$postsはPostControllerの'posts'と対応
 */
 
 ?>
+=======
+    public function index(Post $post)
+    {
+        return $post->get();
+    }
+    
+}
+ master
