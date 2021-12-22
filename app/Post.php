@@ -13,7 +13,7 @@ class Post extends Model
     ];
     
     
-    public function getPaginate(){
+    public function getPaginateBylimit(){
         return $this -> orderBy('updated_at','DESC')->paginate(5);
     }
 }
